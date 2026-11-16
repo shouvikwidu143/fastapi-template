@@ -44,3 +44,7 @@ app.include_router(
     app_router,
     prefix="/api/v1"
 )
+
+@app.get("/health", tags=["Health"])
+def health():
+    return {"status": "ok"}
